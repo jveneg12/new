@@ -1,0 +1,20 @@
+{% extends "demo/base.html" %}
+
+{%block content %}
+                    
+            {% if user.is_staff %}
+				Es de la empresa		
+                
+                {% for e in users  %}
+
+                
+                <ol>{{ e }}</ol>
+
+                
+                
+                {% endfor %}
+            {% else %}
+                Este usuario no trabaja aca
+            {% endif %}
+            
+{% endblock %}
